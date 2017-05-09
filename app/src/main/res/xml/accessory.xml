@@ -1,0 +1,35 @@
+<accessories xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- model-name: Name of accessory as understood by user.
+        This name should match the model name defined by manufacturer -->
+    <!-- category: Defines the category of the device been supported -->
+    <!-- package: name of the package designated to handle this accessory -->
+    <!-- service_class: name of the service class that will expose interface for this accessory
+         this service class could be different that actual accessory service.-->
+    <!-- Please refer to AccessoryProvider and AccessoryType in Poynt SDK -->
+    <!-- For example in order to expose CashDrawer function to rest of the system accessory
+         provider service needs to implement ICashDrawerService interface. -->
+
+    <!-- REQUIRED: application id of this app
+         this appid is issued by poynt web portal
+         IMPORTANT: Replace this appid with your appid.
+
+         Steps to get appId:
+         1. upload your work-in-progress apk to poynt.net (make sure it has the package name you will be
+             using going forward
+         2. you will be issued and appId private/public keypair
+         3. replace the appId below with your appId
+
+         -->
+    <!--<appid>urn:aid:0f39b7a3-b9db-41f1-9cdb-9f04a3620ade</appid>-->
+    <appid>urn:aid:d3462a56-737b-4419-b54c-39a59f4dc8d6</appid>
+
+
+    <accessory
+        category="Cash Drawer"
+        model-name="Dennis"
+        service_class="com.example.accessoryprovidersample.MyCashDrawerService"
+        version="1.0">
+        <usb-device/>
+    </accessory>
+
+</accessories>
